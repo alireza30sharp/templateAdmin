@@ -1,0 +1,17 @@
+
+<div class="example-wrapper">
+
+  <ag-grid-angular 
+                   class="ag-theme-alpine"
+                   [columnDefs]="columnDefs"
+                   [suppressAggFuncInHeader]="true"
+                   [animateRows]="true"
+                   [rowGroupPanelShow]="rowGroupPanelShow"
+                   [pivotPanelShow]="pivotPanelShow"
+                   [defaultColDef]="defaultColDef"
+                   [autoGroupColumnDef]="autoGroupColumnDef"
+                   [rowData]="rowData"
+                   [gridOptions]="gridOptions"
+                   (gridReady)="onGridReady($event)"></ag-grid-angular>
+</div>
+

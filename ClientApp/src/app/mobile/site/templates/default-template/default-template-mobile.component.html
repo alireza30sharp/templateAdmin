@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="bg-main py-3 px-3 row">
+
+    <div class="navbar col-12">
+      <div [routerLink]="'/'">
+        <img src="../../../assets/images/logo.svg" id="logo" />
+        <span class="red-color f-12 me-3">کتاب</span>
+      </div>
+      <i class="fa fa-{{showMenu ? 'times' : 'bars'}} pointer f-20 ms-2"
+         (click)="showMenu =!showMenu"
+         data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"></i>
+    </div>
+
+
+
+    <div class="transition scroller col-12">
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-body">
+    <app-side-menu-mobile></app-side-menu-mobile>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+<label class="cursor-pointer hover text-bold text-success" *ngIf="reverseFlag ? !flag : flag" (click)="onClick($event)">{{ reverseFlag ? deActiveLabel  : activeLabel }}</label>
+<label class="cursor-pointer hover text-secondary" *ngIf="reverseFlag ? flag : !flag" (click)="onClick($event)">{{ reverseFlag ? activeLabel : deActiveLabel }}</label>

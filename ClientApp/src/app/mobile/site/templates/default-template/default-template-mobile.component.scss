@@ -1,0 +1,35 @@
+.bg-main {
+  padding-top: 5.1rem !important;
+  background-color: #ffffff;
+}
+
+.scroller {
+  /*height: 96vh;*/
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#logo {
+  width: 35px;
+  height: 35px;
+}
+
+#offcanvasExample {
+  transition: all 0.3s ease 0s;
+}
+
+.offcanvas-backdrop {
+  display: none;
+}
+
+.navbar {
+  height: 4rem;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #00000020;
+  box-shadow: 0 0 30px #00000015;
+  z-index: 9999;
+}

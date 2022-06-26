@@ -1,0 +1,27 @@
+.rotate {
+  transform: rotate(90deg);
+}
+
+.day {
+  width: 100%;
+  background-color: #fafafa;
+  min-height: 140px;
+}
+
+.w-13rem {
+  width: 13rem;
+}
+
+.txt-box {
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border-current {
+  border-color: #EA4335 !important;
+}
+
+.color-current {
+  color: #EA4335 !important
+}

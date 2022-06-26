@@ -1,0 +1,17 @@
+<div class="example-wrapper">
+  <div style="margin-bottom: 1rem;">
+    <button (click)="onMedalsFirst()">Medals First</button>
+    <button (click)="onMedalsLast()">Medals Last</button>
+    <button (click)="onCountryFirst()">Country First</button>
+    <button (click)="onSwapFirstTwo()">Swap First Two</button>
+    <button (click)="onPrintColumns()">Print Columns</button>
+  </div>
+
+  <ag-grid-angular class="ag-theme-alpine"
+                   [columnDefs]="columnDefs"
+                   [defaultColDef]="defaultColDef"
+                   [suppressDragLeaveHidesColumns]="true"
+                   [rowData]="rowData"
+                   [gridOptions]="gridOptions"
+                   (gridReady)="onGridReady($event)"></ag-grid-angular>
+</div>

@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-12 pb-3">
+    
+    <div class="mt-4 position-relative">
+
+      <div class="d-flex justify-content-between align-items-center text-center f-11">
+        
+        <p class=""><!--lazem ast--></p>
+
+          <div class="text-center w-13rem">شنبه</div>
+          <div class="text-center w-13rem">یکشنبه</div>
+          <div class="text-center w-13rem">دوشنبه</div>
+          <div class="text-center w-13rem">سه شنبه</div>
+          <div class="text-center w-13rem">چهارشنبه</div>
+          <div class="text-center w-13rem">پنجشنبه</div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-4 position-relative">
+
+      <div class="d-flex justify-content-around align-items-center">
+
+        <div class="txt-box">
+          <p class="d-flex f-14 text-center m-0 rotate">هفته&nbsp;<span class="red-color">جاری</span></p>
+        </div>
+
+        <div class="w-100 mx-2" *ngFor="let item of  weekendReserve|slice:0:6;">
+     
+
+          
+              <div class="day f-11 text-center border border-2 col-lg-2 p-3 radius-15 text-center">
+
+                <p class="mb-2 f-12">
+                  {{item.Date |jalali}}
+                </p>
+                <p class="mb-2 fw-bold">{{item.MainFood}}</p>
+                <p class="mb-2"> 12تومان</p>
+                <div class="d-flex align-items-center d-flex justify-content-evenly">
+                  <i class="fa-regular f-18 fa-file-lines gray-color pointer" ></i>
+                  <i class="fa-regular f-18 fa-trash red-color pointer"></i>
+                </div>
+              </div>
+         
+        
+   
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-3 mb-3 position-relative">
+
+      <div class="d-flex justify-content-around align-items-center">
+
+        <div class="txt-box">
+          <p class="d-flex f-14 text-center m-0 rotate">هفته&nbsp;<span class="red-color">آتی</span></p>
+        </div>
+
+        <div class="w-100 mx-2" *ngFor="let item of  weekendReserve|slice:7:13;">
+
+
+
+          <div class="day f-11 text-center border border-2 col-lg-2 p-3 radius-15 text-center">
+
+            <p class="mb-2 f-12">
+              {{item.Date |jalali}}
+            </p>
+            <p class="mb-2 fw-bold">{{item.MainFood}}</p>
+            <p class="mb-2"> 12تومان</p>
+            <div class="d-flex align-items-center d-flex justify-content-evenly">
+              <i class="fa-regular f-18 fa-file-lines gray-color pointer"></i>
+              <i class="fa-regular f-18 fa-trash red-color pointer"></i>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+        <!--<div class="w-100 mx-2" *ngFor="let item of  weekendReserve|slice:7:13">
+  <ng-container *ngIf="!item.isHoliday;else Holiday" >
+         <ng-container *ngIf="item.foods.length==0;else food">
+           <div [class.border-current]="item.isCurentDate"
+                class="day
+                f-11 d-flex flex-column justify-content-center
+                text-center border border-2 col-lg-2 p-3 radius-15 text-center">
+             <p class="mb-2 f-12" [class.color-current]="item.isCurentDate">
+               {{item.isCurentDate?' امروز':''}}  {{item.Date |jalali: 'YYYY/MM/DD'}}
+             </p>
+             <p class="mb-2 gray-color f-11 fw-bold">غذایی رزرو نشده</p>
+             <p class="mb-2 gray-color f-10">بدون قیمت</p>
+             <p class="mb-2 pointer f-15" style="color:red" (click)="ordersPage(item)">رزرو غذا</p>
+           </div>
+         </ng-container>
+         <ng-template #food>
+           <div class="day f-11 text-center border border-2 col-lg-2 p-3 radius-15 text-center">
+             <p class="mb-2 f-12" [class.color-current]="item.isCurentDate">
+               {{item.isCurentDate?' امروز':''}}  {{item.Date |jalali: 'YYYY/MM/DD'}}
+             </p>
+             <p class="mb-2">{{item.MainFood}}</p>
+             <p class="mb-2"> {{item.totalPrice}} ت</p>
+             <div class="d-flex align-items-center d-flex justify-content-evenly">
+               <i class="fa-regular f-18 fa-file-lines gray-color pointer" (click)="openModalOrderDetails(item)"></i>
+               <i class="fa-regular f-18 fa-pen-to-square gray-color pointer"
+                  (click)="ordersPage(item)"></i>
+               <i class="fa-regular f-18 fa-trash red-color pointer" *ngIf="!item.isRemove" (click)="openModalRemove(item)"></i>
+             </div>
+           </div>
+         </ng-template>
+  </ng-container>
+  <ng-template #Holiday>
+    <div class="day
+          f-11 d-flex flex-column justify-content-center
+         text-center border border-2 col-lg-2 p-3 radius-15 text-center">
+      <p class="mb-2 gray-color f-15">تعطیل</p>
+    </div>
+  </ng-template>
+     </div>-->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

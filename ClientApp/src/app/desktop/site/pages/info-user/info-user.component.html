@@ -1,0 +1,35 @@
+
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center align-items-center h-100 z-index-1 response">
+        <div class="box d-flex justify-content-center align-items-center flex-column px-2">
+ 
+          <div class="w-100 mt-3 px-3 px-sm-5">
+
+            <div class="mb-4 position-relative">
+              <input type="text" id="disabledTextInput"
+                     placeholder=" "
+                     class="form-control radius-10 f-18 h-45">
+              <label for="disabledTextInput" class="f-13 label-custom">نام کاربری</label>
+            </div>
+
+            <div class="mb-4 position-relative">
+      
+              <input type="text" id="disabledTextInput"
+                     placeholder=" "
+                    [(ngModel)]="displayName"
+                     (ngModelChange)="change($event)"
+                     class="form-control radius-10 f-18 h-45">
+              <label for="disabledTextInput" class="f-13 label-custom">displayName</label>
+            </div>
+
+            <button class="btn btn-red w-100 h-45">ثبت</button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+

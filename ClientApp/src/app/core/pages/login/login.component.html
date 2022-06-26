@@ -1,0 +1,43 @@
+
+<!--<img [src]="orderItem.image"
+     (click)="showDetailsModal()"
+     [default]="'/assets/images/food-2.png'" class="rounded-circle img-food pointer" />-->
+<div class="bg-login">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center align-items-center h-100 z-index-1 response">
+        <div class="box d-flex justify-content-center align-items-center flex-column px-2">
+          <img class="w-100px" src="assets/images/logo.svg" />
+          <h1 class="f-20 fw-bold mt-4">ورود به حساب کاربری</h1>
+
+          <div class="w-100 mt-3 px-3 px-sm-5">
+
+            <div class="mb-4 position-relative">
+              <input type="text" id="disabledTextInput"
+                     placeholder=" "
+                   
+                     class="form-control radius-10 f-18 h-45">
+              <label for="disabledTextInput" class="f-13 label-custom">نام کاربری</label>
+            </div>
+
+            <div class="mb-4 position-relative">
+              <input type="{{show ? 'password' : 'text'}}" id="disabledTextInput"
+                     placeholder=" "
+                   
+                     class="form-control radius-10 f-18 h-45 ps-5">
+              <label for="disabledTextInput" class="f-13 label-custom">رمز ورود</label>
+              <i class="far fa-eye{{show ? '-slash' : ''}} show-pass pointer gray-color f-18" (click)="show =!show"></i>
+            </div>
+
+            <button class="btn btn-red w-100 h-45" >ورود</button>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center align-items-center h-100 z-index-1 d-lg-flex d-none">
+        <img class="img-login" src="../../../assets/images/hamburger.svg" />
+      </div>
+    </div>
+  </div>
+</div>

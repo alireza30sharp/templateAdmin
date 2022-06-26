@@ -1,0 +1,24 @@
+
+
+
+<div style="height: 100%; display: flex; flex-direction: column;">
+  <div style="margin-bottom: 4px;">
+    <button (click)="addItems(undefined)">Add Items</button>
+    <button (click)="addItems(2)">Add Items addIndex=2</button>
+    <button (click)="updateItems()">Update Top 2</button>
+    <button (click)="onRemoveSelected()">Remove Selected</button>
+    <button (click)="getRowData()">Get Row Data</button>
+    <button (click)="clearData()">Clear Data</button>
+  </div>
+  <div style="flex-grow: 1;">
+    <ag-grid-angular 
+                     class="ag-theme-alpine"
+                     [columnDefs]="columnDefs"
+                       [gridOptions]="gridOptions"
+                     [defaultColDef]="defaultColDef"
+                     [rowData]="rowData"
+                     [rowSelection]="rowSelection"
+                     [animateRows]="true"
+                     (gridReady)="onGridReady($event)"></ag-grid-angular>
+  </div>
+</div>

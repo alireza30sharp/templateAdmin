@@ -1,0 +1,25 @@
+
+<!--<ag-grid-angular class="ag-theme-balham"
+                 [rowData]="rowDataDefault"
+                 (gridReady)="onGridReady($event)"
+                 [gridOptions]="gridOptions"
+                 (rowClicked)='onRowClicked($event)'
+                 (filterChanged)="onFilterChanged($event)"
+                 [getContextMenuItems]="getContextMenuItems"
+                 [columnDefs]="columnsDefault"
+                 [enableRangeSelection]="true"
+                 [pagination]="true"
+                 [paginationPageSize]="paginationPageSize"
+                 [allowContextMenuWithControlKey]="true">
+</ag-grid-angular>-->
+<br>
+<br>
+<ag-grid-angular 
+                 class="ag-theme-alpine"
+                 [columnDefs]="columnDefs"
+                       [gridOptions]="gridOptions"
+                 [enableRangeSelection]="true"
+                 [allowContextMenuWithControlKey]="true"
+                 [getContextMenuItems]="getContextMenuItems"
+                 [rowData]="rowData"
+                 (gridReady)="onGridReady($event)"></ag-grid-angular>

@@ -1,0 +1,32 @@
+
+
+<div class="container-fluid">
+
+  <div class="row bg-main h-100 py-3 px-3">
+    <div class="col-lg-{{showMenu ? '2' : '1'}} transition pe-0">
+      <app-side-menu (hideMenuEvent)="hideMenuEvent($event)"></app-side-menu>
+    </div>
+    <div class="col-lg-{{showMenu ? '10' : '11'}} pe-4 transition">
+
+
+      <div class="" style="height:85vh">
+      <router-outlet></router-outlet>
+
+      </div>
+      <div class="row">
+        <button (click)="set()">
+          set
+        </button>
+        <button (click)="clear()">
+          clear
+        </button>
+        <default-footer></default-footer>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+

@@ -1,0 +1,101 @@
+
+
+<div class="bg-side d-flex flex-column justify-content-between pb-3 px-3 f-11 {{showMenu ? 'w-8' : 'w-16'}}">
+  <h1>{{balance}}</h1>
+  <ul class="list-group list-group-flush px-0">
+    <li class="list-group-item list-group-item-red mt-3 pointer {{showMenu ? 'text-center' : ''}}"
+        [routerLink]="['/']">
+      <!--<img src="../../../assets/images/logo.svg" id="logo" />-->
+      <span class="red-color me-3" *ngIf="!showMenu">منو</span>
+    </li>
+    <div class="line my-3"></div>
+    <!--*ngxPermissionsOnly="[roleType.User]"-->
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+           [routerLink]="['/info']"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-ticket f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 1</span>
+    </li>
+    <!--*ngxPermissionsOnly="[roleType.Admin,roleType.Manager]"-->
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-ticket f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 2</span>
+    </li>
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-wallet f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 3</span>
+    </li>
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-slide-page f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 4</span>
+    </li>
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-slide-page f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 5</span>
+    </li>
+
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-user f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">  منو 7</span>
+    </li>
+
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        routerLinkActive="activeMenu">
+      <i class="icon-fo-user f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">منو 8</span>
+    </li>
+
+
+  </ul>
+
+
+
+
+  <ul class="list-group list-group-flush px-0">
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}" (click)="openModalWithComponent()">
+      <i class="icon-fo-security-check f-23 gray-color {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">شیوه استفاده</span>
+    </li>
+    <li class="align-items-center d-flex list-group-item border-0 py-3 pointer {{showMenu ? 'justify-content-center' : ''}}"
+        placement="start"
+        [ngbPopover]="popContent">
+      <img src="../../../assets/images/user.png" class="rounded-circle img-profile {{showMenu ? '' : 'ms-3'}}" />
+      <span *ngIf="!showMenu">{{userName}}  نام کاربری</span>
+    </li>
+    <li class="align-items-center d-flex list-group-item list-group-item-red border-0 py-3 red-color pointer {{showMenu ? 'justify-content-center' : ''}}" (click)="hideMenu()">
+      <i class="icon-fo-arrow-{{showMenu ? 'left' : 'right'}} f-23 {{showMenu ? '' : 'ms-3'}}"></i>
+      <span *ngIf="!showMenu">بستن منو</span>
+    </li>
+  </ul>
+
+</div>
+
+
+
+<ng-template #popContent>
+  <ul class="list-group list-group-flush px-0 f-12 fw-bold">
+    <li class="list-group-item rounded-0 border-0 pointer" >دسترسی 2</li>
+    <li class="list-group-item rounded-0 border-0 pointer">دسترسی 3</li>
+    <li class="list-group-item rounded-0 border-0 pointer" >دسترسی 4</li>
+    <li class="list-group-item rounded-0 pointer"
+        >    
+      <div class="form-check form-switch float-start">
+        <input class="form-check-input"
+               type="checkbox"
+           role="switch" id="flexSwitchCheckDefault">
+      </div>
+      رزرو خودکار غذای ستاد
+    </li>
+  
+    <li class="list-group-item rounded-0 border-0 pointer" (click)="showChangeModal()"> تغییر رمز</li>
+    <li class="list-group-item rounded-0 border-0 pointer red-color" (click)="signOut()">  خروج</li>
+  </ul>
+
+
+
+</ng-template>

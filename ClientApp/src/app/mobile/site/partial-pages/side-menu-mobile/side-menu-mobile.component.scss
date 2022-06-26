@@ -1,0 +1,48 @@
+.position-fixed {
+  bottom: 20px;
+  width: 13%;
+}
+
+.img-profile {
+  width: 24px;
+  height: 24px;
+}
+
+.hide {
+  width: 4% !important;
+}
+
+.bg-side {
+  background-color: #ffffff;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.activeMenu {
+  background-color: #EA4335 !important;
+
+  & i, span {
+    color: var(--white-txt) !important;
+  }
+}
+
+.w-0 {
+    width: 0;
+}
+
+.w-16 {
+    width: 16%;
+}
+
+.list-group-item {
+  border: none !important;
+  border-radius: 15px;
+}
+
+.line {
+  border-top: 1px solid #00000015;
+}

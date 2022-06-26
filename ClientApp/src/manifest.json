@@ -1,0 +1,31 @@
+{
+  "gcm_sender_id": "779115212521",
+  "name": "Angular",
+  "short_name": "Angular",
+  "theme_color": "#414b5b",
+  "background_color": "#fafafa",
+  "orientation": "portrait",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "assets/icons/72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}

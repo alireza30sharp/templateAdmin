@@ -1,0 +1,19 @@
+.week-box {
+  height: 4rem;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f8f8f8;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.edit {
+  border: 2px solid #dcdcdc;
+}
+
+.day {
+  border: 2px solid #EA4335;
+}

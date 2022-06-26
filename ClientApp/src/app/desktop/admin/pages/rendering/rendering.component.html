@@ -1,0 +1,37 @@
+<div class="example-wrapper" (keydown)="onKeydown($event)">
+  <div style="margin-bottom: 5px;">
+    <button (click)="onUpdateSomeValues()">
+      Update Some D &amp; E Values
+    </button>
+    <button (click)="AddRow()">
+      Add
+    </button>
+    <button (click)="onBtStartEditing()">
+      onBtStartEditing
+    </button>
+
+    <button (click)="undoCellEditing()">
+      undoCellEditing
+    </button>
+  </div>
+  <ag-grid-angular class="ag-theme-alpine"
+                   [columnDefs]="columnDefs"
+                   [defaultColDef]="defaultColDef"
+                   [rowData]="rowData"
+                   [gridOptions]="gridOptions"
+                   [rowSelection]="'single'"
+                   [navigateToNextCell]="navigateToNextCell"
+                   (rowValueChanged)="onRowValueChanged($event)"
+                   [undoRedoCellEditing]="undoRedoCellEditing"
+                   [undoRedoCellEditingLimit]="undoRedoCellEditingLimit"
+                   [enterMovesDown]="true"
+                     [stopEditingWhenCellsLoseFocus]="true"
+                     [enterMovesDownAfterEdit]="true"
+                   (cellValueChanged)="onCellValueChanged($event)"
+                   (gridReady)="onGridReady($event)"></ag-grid-angular>
+</div>
+
+
+
+
+
